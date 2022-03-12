@@ -4,40 +4,25 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private Animator anim;
+    public float moveSpeed;
+    public float moveDir;
 
-    [SerializedFeild]
-    private float moveSpeed;
-
+    private Rigidbody RB;
+    
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
-        anim = GetComponent<Animator>();
+        RB = this.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            anim.Play("Idle");
-        }
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            anim.Play("Run");
-        }
+        moveDir = Input.GetAxis("Horizontal");
     }
-    void Move()
+
+    private void FixedUpdate()
     {
-        float DirX = Input.GetAxis("Horizontal");
-        float DirZ = Input.GetAxis("Vertical");
-
-        Vector3 _moveHorizontal = transform.right * DirX;
-        Vector3 _moveVertical = transform.forward * DirZ;
-
-        Vector3 _vel = (_moveHorizontal + _moveVertical).normalized;
-
-
-
+        RB.velocity = new Vector2(moveDir * moveSpeed, RB.velocity.y);
     }
 }
