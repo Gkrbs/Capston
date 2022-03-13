@@ -6,12 +6,14 @@ public class PlayerController : MonoBehaviour
 {
     public float moveSpeed;
     public float moveDir;
-
+    
+    private Animator AN;
     private Rigidbody RB;
     
     // Start is called before the first frame update
     void Start()
     {
+        AN = GetComponent<Animator>();
         RB = this.GetComponent<Rigidbody>();
     }
 
@@ -19,10 +21,17 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         moveDir = Input.GetAxis("Horizontal");
-    }
-
-    private void FixedUpdate()
-    {
         RB.velocity = new Vector2(moveDir * moveSpeed, RB.velocity.y);
+
+        if (moveDir > 0)
+            AN.SetBool("front", true);
+        else if (moveDir < 0)
+            AN.SetBool("back", true);
+        else
+        {
+            AN.SetBool("front", false);
+            AN.SetBool("back", false);
+        }
+
     }
 }
