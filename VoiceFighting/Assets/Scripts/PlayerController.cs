@@ -6,7 +6,10 @@ public class PlayerController : MonoBehaviour
 {
     public float moveSpeed;
     public float moveDir;
-    
+    public float walkSpeed = 2;
+    public float runSpeed = 4;
+    public float backSpeed = 2;
+
     private Animator AN;
     private Rigidbody RB;
     
@@ -23,14 +26,34 @@ public class PlayerController : MonoBehaviour
         moveDir = Input.GetAxis("Horizontal");
         RB.velocity = new Vector2(moveDir * moveSpeed, RB.velocity.y);
 
-        if (moveDir > 0)
-            AN.SetBool("front", true);
+        moveSpeed = walkSpeed;
+
+        if (Input.GetKey(KeyCode.LeftShift))
+            moveSpeed = runSpeed;
+        if (Input.GetKeyDown(KeyCode.C))
+            AN.SetBool("jump", true);
+
+        if (moveDir > 0 && moveSpeed == walkSpeed)
+        {
+            AN.SetBool("run", false);
+            AN.SetBool("walk", true);
+        }
+        else if (moveDir > 0 && moveSpeed == runSpeed)
+        {
+            AN.SetBool("walk", false);
+            AN.SetBool("run", true);
+        }
         else if (moveDir < 0)
+        {
+            moveSpeed = backSpeed;
             AN.SetBool("back", true);
+        }
         else
         {
-            AN.SetBool("front", false);
+            AN.SetBool("run", false);
+            AN.SetBool("walk", false);
             AN.SetBool("back", false);
+            AN.SetBool("jump", false);
         }
 
     }
