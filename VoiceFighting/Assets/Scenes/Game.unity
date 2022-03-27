@@ -867,6 +867,42 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2e682b966e3f644392ffbfab511e0e2, type: 3}
+--- !u!1 &227495428 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4408529143413910321, guid: d6d06c887a1aae94f8c6e8cc2c0c557b, type: 3}
+  m_PrefabInstance: {fileID: 1785595166}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &227495431
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 227495428}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 79e6b71f699edbb4a89f1901d108217d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &227495432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 227495428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3daba19c9c2f5a4ca322c970ce6c6ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &242093784 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 880970725214738984, guid: c60edd51c065ceb46b345849a03bc106, type: 3}
@@ -1443,10 +1479,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 408168978}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9c6be3824ef00749a8500aa802eb3eb, type: 3}
+  m_Script: {fileID: 11500000, guid: e3daba19c9c2f5a4ca322c970ce6c6ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walk_Speed: 4
 --- !u!54 &408168983
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1463,6 +1498,33 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &408168984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408168978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9c6be3824ef00749a8500aa802eb3eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  move_Speed: 0
+  walk_Speed: 2
+  run_Speed: 4
+--- !u!114 &408168985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408168978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2e5380a222cd864c84dcf6eb0dac961, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &410361948
 PrefabInstance:
   m_ObjectHideFlags: 0

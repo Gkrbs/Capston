@@ -5,6 +5,7 @@ using UnityEngine;
 public class AnimationTags
 {
     public const string MOVEMENT = "Movement";
+    public const string BACK = "Back";
 
     public const string PUNCH_1_TRIGGER = "Punch1";
     public const string PUNCH_2_TRIGGER = "Punch2";
