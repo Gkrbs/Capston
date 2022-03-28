@@ -1,0 +1,37 @@
+private string _microphoneID = null;
+private AudioClip _recording = null;
+private int _recordingLengthSec = 15;
+private int _recordingHZ = 22050;
+
+private void Start()
+{
+    _microphoneID = Microphone.devices[0];
+}
+
+// 버튼을 OnPointerDown 할 때 호출
+public void startRecording()
+{
+	Debug.Log("start recording");
+	_recording = Microphone.Start(_microphoneID, false, _recordingLengthSec, _recordingHZ);
+}
+// 버튼을 OnPointerUp 할 때 호출
+public void stopRecording()
+{
+	if (Microphone.IsRecording(_microphoneID))
+	{
+		Microphone.End(_microphoneID);
+
+		Debug.Log("stop recording");
+		if (_recording == null)
+		{
+			Debug.LogError("nothing recorded");
+			return;
+		}
+		// audio clip to byte array
+		byte[] byteData = getByteFromAudioClip(_recording);
+
+		// 녹음된 audioclip api 서버로 보냄
+		StartCoroutine(PostVoice(url, byteData));
+	}
+	return;
+}
