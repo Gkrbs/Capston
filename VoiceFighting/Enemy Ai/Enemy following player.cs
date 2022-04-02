@@ -60,6 +60,8 @@ public class EnemyControll : MonoBehaviour
    
     void Update()
     {
-        
+        direction = playerTransform - this.transform.position;
+        direction.y = 0;
+        this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.LookRotation(direction),0.3f);
     }
 }
