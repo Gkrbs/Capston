@@ -24,7 +24,8 @@ public class EnemyControll : MonoBehaviour
         _transform = this.gameObject.GetComponent<Transform>();
         playerTransform = GameObject.FindWithTag("Player").GetComponent<Transform>();
         nvAgent = this.gameObject.GetComponent<NavMeshAgent>();
-        _animator = thils.gameObject.GetComponent<Animator>();
+
+        _animator = GetComponent<Animator>();
         nvAgent.destination = playerTransform.position;
         _animator.Setbool("istrace",true);
 
