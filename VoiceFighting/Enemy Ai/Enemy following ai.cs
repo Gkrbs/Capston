@@ -28,7 +28,7 @@ public class EnemyControll : MonoBehaviour
    
     void Update()
     {
-        //적이 플레이어를 바라보게 하는 
+        //적이 플레이어를 바라보게 하는 부분
         direction = playerTransform - this.transform.position;
         direction.y = 0;
         this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.LookRotation(direction),0.3f);
