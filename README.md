@@ -18,14 +18,18 @@ VoiceFighting
 ### 3. 음성인식을 사용한 격투게임
 2022.3.28
 현재 진행상황
+
 콤보 기능과 점프 기능 추가
+
 애니메이션이 부자연스럽고 점프가 중복입력되는 문제점이 있음
 ![새 비디오 만들기](https://user-images.githubusercontent.com/35729343/161417604-fcf7cc26-6e5f-4d0f-a9f4-259b90a464d7.gif)
 ![123](https://user-images.githubusercontent.com/35729343/161417606-1b8ad22b-dc1c-4c1d-840a-d6c0d7b128a1.gif)
 
 컴퓨터 ai 추가
+
 스크립트 적용 오류로 현재 플레이어를 추적하지 않음 수정필요
 
 마이크로폰 기능추가
+
 버튼을 누르고 음성을 녹음하는 기능
 실시간 레코딩 기능으로 전환하여야 함
