@@ -689,8 +689,20 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 120
   m_CollisionDetection: 0
+--- !u!114 &166498827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166498822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fe8c77321bba3b4a86192488c5f971a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!195 &166498828
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1518,7 +1530,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!114 &408168984
 MonoBehaviour:
@@ -1535,6 +1547,7 @@ MonoBehaviour:
   move_Speed: 0
   walk_Speed: 2
   run_Speed: 4
+  jump_Speed: 5
 --- !u!114 &408168985
 MonoBehaviour:
   m_ObjectHideFlags: 0

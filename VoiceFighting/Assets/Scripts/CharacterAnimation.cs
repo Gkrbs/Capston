@@ -11,6 +11,8 @@ public class CharacterAnimation : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
+
+
     public void Walk(bool walk)
     {
         anim.SetBool(AnimationTags.MOVEMENT, walk);
@@ -19,6 +21,15 @@ public class CharacterAnimation : MonoBehaviour
     public void Back(bool back)
     {
         anim.SetBool(AnimationTags.BACK, back);
+    }
+
+
+
+
+
+    public void Jump()
+    {
+        anim.SetTrigger(AnimationTags.JUMP);
     }
 
     public void Punch_1()

@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public float move_Speed;
     public float walk_Speed = 2f;
     public float run_Speed = 4f;
+    public float jump_Speed = 5;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         AnimatePlayerWalk();
+        Jump();
     }
 
     void FixedUpdate()
@@ -34,10 +36,21 @@ public class PlayerMovement : MonoBehaviour
         myBody.velocity = new Vector2(Input.GetAxis(Axis.HORIZONTAL_AXIS) * (walk_Speed),
             myBody.velocity.y);
     }
-
+    void Jump()
+    {
+        if (Input.GetButtonDown("Jump"))
+        {
+            myBody.AddForce(Vector3.up * jump_Speed, ForceMode.Impulse);
+        }
+    }
     void AnimatePlayerWalk()
     {
-        if(Input.GetAxis(Axis.HORIZONTAL_AXIS) > 0)
+        if (Input.GetAxis(Axis.VERTICAL_AXIS) > 0)
+        {
+            player_Anim.Jump();
+        }
+
+        if (Input.GetAxis(Axis.HORIZONTAL_AXIS) > 0)
         {
             player_Anim.Walk(true);
         }

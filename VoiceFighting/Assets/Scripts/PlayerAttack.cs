@@ -55,17 +55,14 @@ public class PlayerAttack : MonoBehaviour
             if (current_Combo_State == ComboState.PUNCH_1)
             {
                 player_Anim.Punch_1();
-                print("punch1");
             }
             if (current_Combo_State == ComboState.PUNCH_2)
             {
                 player_Anim.Punch_2();
-                print("punch2");
             }
             if (current_Combo_State == ComboState.PUNCH_3)
             {
                 player_Anim.Punch_3();
-                print("punch3");
             }
 
 
