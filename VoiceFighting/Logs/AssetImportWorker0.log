@@ -1,0 +1,574 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.25f1 (9b9180224418) revision 10195328'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19043) 64bit Core' Language: 'ko' Physical Memory: 16317 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.3.25f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+D:/Git_work/Capston/VoiceFighting
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+50531
+Successfully changed project path to: D:/Git_work/Capston/VoiceFighting
+D:/Git_work/Capston/VoiceFighting
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 38.37 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.25f1 (9b9180224418)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Git_work/Capston/VoiceFighting/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1060 3GB (ID=0x1c02)
+    Vendor:   
+    VRAM:     2988 MB
+    Driver:   30.0.14.7141
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56168
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002508 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 35.67 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.585 seconds
+Domain Reload Profiling:
+	ReloadAssembly (585ms)
+		BeginReloadAssembly (55ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (454ms)
+			LoadAssemblies (53ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (154ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (30ms)
+			SetupLoadedEditorAssemblies (164ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (36ms)
+				BeforeProcessingInitializeOnLoad (9ms)
+				ProcessInitializeOnLoadAttributes (83ms)
+				ProcessInitializeOnLoadMethodAttributes (31ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.003012 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.37 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.009 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1010ms)
+		BeginReloadAssembly (145ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (19ms)
+		EndReloadAssembly (804ms)
+			LoadAssemblies (86ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (285ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (45ms)
+			SetupLoadedEditorAssemblies (296ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (55ms)
+				ProcessInitializeOnLoadAttributes (219ms)
+				ProcessInitializeOnLoadMethodAttributes (9ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
+Refreshing native plugins compatible for Editor in 0.44 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1661 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 87.9 MB.
+System memory in use after: 88.0 MB.
+
+Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 2112.
+Total: 2.654300 ms (FindLiveObjects: 0.147000 ms CreateObjectMapping: 0.060200 ms MarkObjects: 2.345100 ms  DeleteObjects: 0.101100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/New Terrain.asset
+  artifactKey: Guid(9c13288415c5bd3448b3640220d02738) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New Terrain.asset using Guid(9c13288415c5bd3448b3640220d02738) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9003f7696a4283e67b6e55b5557c4816') in 0.051557 seconds 
+  Import took 0.064641 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.427066 seconds.
+  path: Assets/Pack/SimpleNaturePack/Materials/SimpleNaturePack_Texture_01.mat
+  artifactKey: Guid(93caadf4359ae8143aad35b3145d31af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pack/SimpleNaturePack/Materials/SimpleNaturePack_Texture_01.mat using Guid(93caadf4359ae8143aad35b3145d31af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6318f8e919b90649bd06cff76cecb97') in 0.096334 seconds 
+  Import took 0.121928 seconds .
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 2.10 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 12 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 57.8 MB.
+System memory in use after: 57.9 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2152.
+Total: 2.736600 ms (FindLiveObjects: 0.126300 ms CreateObjectMapping: 0.050000 ms MarkObjects: 2.545300 ms  DeleteObjects: 0.014200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 25.955817 seconds.
+  path: Assets/Pack/SimpleNaturePack/Materials/New Terrain Layer.terrainlayer
+  artifactKey: Guid(d904a655b252cd34ab1b0685a5b6fc58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pack/SimpleNaturePack/Materials/New Terrain Layer.terrainlayer using Guid(d904a655b252cd34ab1b0685a5b6fc58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd517b7f3a202c487fe6ee3b731612e02') in 0.013747 seconds 
+  Import took 0.016783 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 122.719888 seconds.
+  path: Assets/Pack/3D Beat Em Up Assets/Models/Environment/Textures/Foliage.tga
+  artifactKey: Guid(964b1fd1b2649374f83801c643172416) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pack/3D Beat Em Up Assets/Models/Environment/Textures/Foliage.tga using Guid(964b1fd1b2649374f83801c643172416) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4f8ae5a65523c2b032b7f3ff3a23e94') in 0.020907 seconds 
+  Import took 0.024708 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.781052 seconds.
+  path: Assets/Pack/3D Beat Em Up Assets/Models/Enemy/Textures/Enemy_N.png
+  artifactKey: Guid(ede42fde13966402e99cd81d28886c45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pack/3D Beat Em Up Assets/Models/Enemy/Textures/Enemy_N.png using Guid(ede42fde13966402e99cd81d28886c45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '839a50382a47e7bfce3bd1c3ad0d4ec4') in 0.055216 seconds 
+  Import took 0.076775 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.419843 seconds.
+  path: Assets/Pack/3D Beat Em Up Assets/Models/Environment/Textures/Graffitti.png
+  artifactKey: Guid(46bdeeb0040e59f479f1675126115353) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pack/3D Beat Em Up Assets/Models/Environment/Textures/Graffitti.png using Guid(46bdeeb0040e59f479f1675126115353) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1175f396f00eed7a8912d6efa3fa6764') in 0.044158 seconds 
+  Import took 0.070169 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.405760 seconds.
+  path: Assets/Pack/3D Beat Em Up Assets/Hit FX/Textures/HitEffectSpriteSheet.png
+  artifactKey: Guid(ede5a07f07e5a9f4caeda22049362fcd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pack/3D Beat Em Up Assets/Hit FX/Textures/HitEffectSpriteSheet.png using Guid(ede5a07f07e5a9f4caeda22049362fcd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cae17e86e3aa54bb127b33b84676635c') in 0.010837 seconds 
+  Import took 0.035377 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.896875 seconds.
+  path: Assets/Pack/3D Beat Em Up Assets/Hit FX/Textures/RadialGradient.png
+  artifactKey: Guid(3b5b5a11f647e5e45a36ba1b8096693a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pack/3D Beat Em Up Assets/Hit FX/Textures/RadialGradient.png using Guid(3b5b5a11f647e5e45a36ba1b8096693a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a01b074ea3b35db0eed28e6d21c01a0a') in 0.031713 seconds 
+  Import took 0.053209 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.912255 seconds.
+  path: Assets/Pack/3D Beat Em Up Assets/Models/Enemy/Textures/Enemy_D.png
+  artifactKey: Guid(eb5e0cb12c52a49b3b05582ac4939f3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pack/3D Beat Em Up Assets/Models/Enemy/Textures/Enemy_D.png using Guid(eb5e0cb12c52a49b3b05582ac4939f3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '844b264b2e0c6b5e30aae32fc264e01f') in 0.020693 seconds 
+  Import took 0.040168 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.532219 seconds.
+  path: Assets/Pack/3D Beat Em Up Assets/UI/HealthBarBg.png
+  artifactKey: Guid(65e4271c010ebcc4b9fa64b919ed0fdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pack/3D Beat Em Up Assets/UI/HealthBarBg.png using Guid(65e4271c010ebcc4b9fa64b919ed0fdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd7784d8cd9700c68a7831714caacb40') in 0.008409 seconds 
+  Import took 0.022876 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.145062 seconds.
+  path: Assets/Pack/3D Beat Em Up Assets/Models/Player/Textures/Player1_ColorMap.png
+  artifactKey: Guid(f36d7af7117674fe8be9676a9041f0f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pack/3D Beat Em Up Assets/Models/Player/Textures/Player1_ColorMap.png using Guid(f36d7af7117674fe8be9676a9041f0f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7e8900748ceef3bb9bf6adcc4e799f4') in 0.034965 seconds 
+  Import took 0.064390 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.358281 seconds.
+  path: Assets/Pack/3D Beat Em Up Assets/Models/Environment/Textures/RadialGradient.png
+  artifactKey: Guid(5f4c7f416b80b5845b1433527f823a49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pack/3D Beat Em Up Assets/Models/Environment/Textures/RadialGradient.png using Guid(5f4c7f416b80b5845b1433527f823a49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71610f1d3c06c79d7ae0ac28ab18553e') in 0.007456 seconds 
+  Import took 0.017591 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.710575 seconds.
+  path: Assets/Pack/3D Beat Em Up Assets/Models/Environment/Textures/Road_D-A.tga
+  artifactKey: Guid(2206940265b5f7f479f100cedafc1d97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pack/3D Beat Em Up Assets/Models/Environment/Textures/Road_D-A.tga using Guid(2206940265b5f7f479f100cedafc1d97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3837826b1014885b946ec03e58379cc') in 0.010558 seconds 
+  Import took 0.032272 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.313167 seconds.
+  path: Assets/Pack/3D Beat Em Up Assets/Models/Environment/Textures/Road_LightMap.png
+  artifactKey: Guid(5677668ab7476af47bac014612351c49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pack/3D Beat Em Up Assets/Models/Environment/Textures/Road_LightMap.png using Guid(5677668ab7476af47bac014612351c49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96b49876750f2930e95170ef55ed73fa') in 0.009694 seconds 
+  Import took 0.022509 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.217943 seconds.
+  path: Assets/Pack/3D Beat Em Up Assets/UI/Char1HUDIcon.png
+  artifactKey: Guid(317bdccdddd711c49930955d4b717d29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pack/3D Beat Em Up Assets/UI/Char1HUDIcon.png using Guid(317bdccdddd711c49930955d4b717d29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19d36a341ecd7fa4fd3f6ec725171276') in 0.012516 seconds 
+  Import took 0.031907 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.033327 seconds.
+  path: Assets/Pack/3D Beat Em Up Assets/Models/Player/Textures/MatCapSkin.png
+  artifactKey: Guid(645556b67980b5c47aeaa66d65021cfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pack/3D Beat Em Up Assets/Models/Player/Textures/MatCapSkin.png using Guid(645556b67980b5c47aeaa66d65021cfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e61d870dc4739f665735ac357cb333c3') in 0.017153 seconds 
+  Import took 0.038178 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.969941 seconds.
+  path: Assets/Pack/3D Beat Em Up Assets/Models/Environment/Textures/TrashProps.tga
+  artifactKey: Guid(60f782863c0130147927330d6dc1e152) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pack/3D Beat Em Up Assets/Models/Environment/Textures/TrashProps.tga using Guid(60f782863c0130147927330d6dc1e152) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd426a8ef5e8374b82b2fd27d48119560') in 0.009894 seconds 
+  Import took 0.030584 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.667388 seconds.
+  path: Assets/Pack/3D Beat Em Up Assets/Models/Enemy/Textures/Enemy_AO.png
+  artifactKey: Guid(8eb8da81224de4994940c511ad7012b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pack/3D Beat Em Up Assets/Models/Enemy/Textures/Enemy_AO.png using Guid(8eb8da81224de4994940c511ad7012b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd551ed844cf95ff0635616c85730d514') in 0.011021 seconds 
+  Import took 0.028599 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.351516 seconds.
+  path: Assets/Pack/3D Beat Em Up Assets/Models/Environment/Textures/Building01.png
+  artifactKey: Guid(1a4e27e5c162b254b906900958cb2e8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pack/3D Beat Em Up Assets/Models/Environment/Textures/Building01.png using Guid(1a4e27e5c162b254b906900958cb2e8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95daaeb1f50b458dad99faf128f70507') in 0.024490 seconds 
+  Import took 0.033623 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.363260 seconds.
+  path: Assets/Pack/3D Beat Em Up Assets/Models/Environment/Textures/Building02_LightMap.png
+  artifactKey: Guid(d97833696711af748b9a2530a36c2b18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pack/3D Beat Em Up Assets/Models/Environment/Textures/Building02_LightMap.png using Guid(d97833696711af748b9a2530a36c2b18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eccbd4478421cf1c6a21e5d89aa61ddf') in 0.011553 seconds 
+  Import took 0.014713 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.408817 seconds.
+  path: Assets/Pack/3D Beat Em Up Assets/Models/Environment/Textures/Building02.png
+  artifactKey: Guid(3909f17fdbce58c479f6c268d0cd1a24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pack/3D Beat Em Up Assets/Models/Environment/Textures/Building02.png using Guid(3909f17fdbce58c479f6c268d0cd1a24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b97a916cd95661013599ec799e95a3cb') in 0.013059 seconds 
+  Import took 0.016347 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.254366 seconds.
+  path: Assets/Pack/3D Beat Em Up Assets/Models/Environment/Textures/Building01_LightMap.png
+  artifactKey: Guid(299ffe0446145154189f3c1b79bb2d74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pack/3D Beat Em Up Assets/Models/Environment/Textures/Building01_LightMap.png using Guid(299ffe0446145154189f3c1b79bb2d74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6389bbbbb46163ca7d8b4124511576fa') in 0.010534 seconds 
+  Import took 0.032652 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.734174 seconds.
+  path: Assets/Pack/3D Beat Em Up Assets/Models/Environment/Textures/Lamps.tga
+  artifactKey: Guid(99328b240dfd5294d8f0735e6c557a6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pack/3D Beat Em Up Assets/Models/Environment/Textures/Lamps.tga using Guid(99328b240dfd5294d8f0735e6c557a6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9054054c7cf10fbd4c4b52166a153f19') in 0.035609 seconds 
+  Import took 0.038736 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000169 seconds.
+  path: Assets/Pack/3D Beat Em Up Assets/Models/Environment/Textures/NightCubeMap.cubemap
+  artifactKey: Guid(7c924a32d89638446a3f0996814f1410) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pack/3D Beat Em Up Assets/Models/Environment/Textures/NightCubeMap.cubemap using Guid(7c924a32d89638446a3f0996814f1410) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c03a5bc4067f0c4520e1b9d5a6663c8') in 0.025632 seconds 
+  Import took 0.047465 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000205 seconds.
+  path: Assets/Pack/3D Beat Em Up Assets/Models/Environment/Textures/MatCapEnvironment2.png
+  artifactKey: Guid(9e61c03a2d82ac048b09ba38008c3941) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pack/3D Beat Em Up Assets/Models/Environment/Textures/MatCapEnvironment2.png using Guid(9e61c03a2d82ac048b09ba38008c3941) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89e70535ebab268597c9ce544a3ddf7a') in 0.032022 seconds 
+  Import took 0.052604 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000196 seconds.
+  path: Assets/Pack/3D Beat Em Up Assets/Models/Environment/Textures/NightSkyTile.png
+  artifactKey: Guid(706ba9c77b8e12a4a8a1cccc5e14b5ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pack/3D Beat Em Up Assets/Models/Environment/Textures/NightSkyTile.png using Guid(706ba9c77b8e12a4a8a1cccc5e14b5ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd911981d428b1ed0c6486fa8d5bfabd6') in 0.052522 seconds 
+  Import took 0.082297 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000246 seconds.
+  path: Assets/Pack/3D Beat Em Up Assets/Models/Environment/Textures/PavementTile.png
+  artifactKey: Guid(85cb125adec5558408e9e368fdf99337) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pack/3D Beat Em Up Assets/Models/Environment/Textures/PavementTile.png using Guid(85cb125adec5558408e9e368fdf99337) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b826908e2dbbe8e2c96d21ab36b5ec72') in 0.094240 seconds 
+  Import took 0.118486 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000167 seconds.
+  path: Assets/Pack/3D Beat Em Up Assets/Models/Environment/Textures/RoadBarrier_D-S.tga
+  artifactKey: Guid(336b3865da0b0bd4192e6f99e09b4010) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pack/3D Beat Em Up Assets/Models/Environment/Textures/RoadBarrier_D-S.tga using Guid(336b3865da0b0bd4192e6f99e09b4010) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d1c2b1099e0e94951f7967c72380f0e') in 0.045484 seconds 
+  Import took 0.060471 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 231.192104 seconds.
+  path: Assets/Pack/SimpleNaturePack/Materials/1234.png
+  artifactKey: Guid(f56f1afdbe34c1f41847b069f243974f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pack/SimpleNaturePack/Materials/1234.png using Guid(f56f1afdbe34c1f41847b069f243974f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55c982e036a3048531e2766802848142') in 0.010655 seconds 
+  Import took 0.027339 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 39.886546 seconds.
+  path: Assets/Pack/SimpleNaturePack/Materials/land.png
+  artifactKey: Guid(295b46745a07e0b4c81d56f48619bf0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pack/SimpleNaturePack/Materials/land.png using Guid(295b46745a07e0b4c81d56f48619bf0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5cdda58268a6b1b7ac7a4c80e86c0d7a') in 0.030206 seconds 
+  Import took 0.053988 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003411 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.39 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.108 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1109ms)
+		BeginReloadAssembly (125ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (37ms)
+		EndReloadAssembly (904ms)
+			LoadAssemblies (93ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (328ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (44ms)
+			SetupLoadedEditorAssemblies (324ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (57ms)
+				ProcessInitializeOnLoadAttributes (242ms)
+				ProcessInitializeOnLoadMethodAttributes (10ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.45 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1645 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.3 MB.
+System memory in use after: 90.4 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2168.
+Total: 2.737000 ms (FindLiveObjects: 0.163100 ms CreateObjectMapping: 0.059600 ms MarkObjects: 2.497400 ms  DeleteObjects: 0.015900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003202 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.38 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.975 seconds
+Domain Reload Profiling:
+	ReloadAssembly (975ms)
+		BeginReloadAssembly (120ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (33ms)
+		EndReloadAssembly (778ms)
+			LoadAssemblies (89ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (287ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (41ms)
+			SetupLoadedEditorAssemblies (275ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (52ms)
+				ProcessInitializeOnLoadAttributes (202ms)
+				ProcessInitializeOnLoadMethodAttributes (8ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.38 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1645 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.3 MB.
+System memory in use after: 90.4 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2170.
+Total: 2.525800 ms (FindLiveObjects: 0.140800 ms CreateObjectMapping: 0.048100 ms MarkObjects: 2.320100 ms  DeleteObjects: 0.015900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002892 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.39 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.987 seconds
+Domain Reload Profiling:
+	ReloadAssembly (988ms)
+		BeginReloadAssembly (117ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (31ms)
+		EndReloadAssembly (807ms)
+			LoadAssemblies (90ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (283ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (39ms)
+			SetupLoadedEditorAssemblies (299ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (53ms)
+				ProcessInitializeOnLoadAttributes (223ms)
+				ProcessInitializeOnLoadMethodAttributes (9ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.46 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1645 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.3 MB.
+System memory in use after: 90.4 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2172.
+Total: 2.422100 ms (FindLiveObjects: 0.130100 ms CreateObjectMapping: 0.052100 ms MarkObjects: 2.224300 ms  DeleteObjects: 0.014800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 589.089261 seconds.
+  path: Assets/Pack/SimpleNaturePack/Materials/NewLayer.terrainlayer
+  artifactKey: Guid(57dd06f0581fcf34890e5561f8b020d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pack/SimpleNaturePack/Materials/NewLayer.terrainlayer using Guid(57dd06f0581fcf34890e5561f8b020d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da4ad20e1c421c2b3046fdea0bae82b5') in 0.057336 seconds 
+  Import took 0.076134 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
