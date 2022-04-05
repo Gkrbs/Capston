@@ -23,14 +23,13 @@ public class CharacterAnimation : MonoBehaviour
         anim.SetBool(AnimationTags.BACK, back);
     }
 
-
-
-
-
-    public void Jump()
+    public void Jump(bool jump)
     {
-        anim.SetTrigger(AnimationTags.JUMP);
+        anim.SetBool(AnimationTags.JUMP, jump);
     }
+
+
+
 
     public void Punch_1()
     {

@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public float run_Speed = 4f;
     public float jump_Speed = 5;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,14 +42,16 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             myBody.AddForce(Vector3.up * jump_Speed, ForceMode.Impulse);
+            player_Anim.Jump(true);
+        }
+        else
+        {
+            player_Anim.Jump(false);
         }
     }
+
     void AnimatePlayerWalk()
     {
-        if (Input.GetAxis(Axis.VERTICAL_AXIS) > 0)
-        {
-            player_Anim.Jump();
-        }
 
         if (Input.GetAxis(Axis.HORIZONTAL_AXIS) > 0)
         {
