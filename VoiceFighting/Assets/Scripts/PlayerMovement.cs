@@ -11,7 +11,8 @@ public class PlayerMovement : MonoBehaviour
     public float walk_Speed = 2f;
     public float run_Speed = 4f;
     public float jump_Speed = 5;
-
+    public float distToGround = 1f;
+    private float canJump = 0f;
 
     // Start is called before the first frame update
     void Start()
@@ -37,11 +38,14 @@ public class PlayerMovement : MonoBehaviour
         myBody.velocity = new Vector2(Input.GetAxis(Axis.HORIZONTAL_AXIS) * (walk_Speed),
             myBody.velocity.y);
     }
+
+
     void Jump()
     {
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && transform.position.y <= -0.5 && Time.time > canJump)
         {
             myBody.AddForce(Vector3.up * jump_Speed, ForceMode.Impulse);
+            canJump = Time.time + 1.5f;
             player_Anim.Jump(true);
         }
         else
@@ -67,4 +71,5 @@ public class PlayerMovement : MonoBehaviour
             player_Anim.Back(false);
         }
     }
+
 }
