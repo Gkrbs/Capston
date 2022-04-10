@@ -29,7 +29,21 @@ public class CharacterAnimation : MonoBehaviour
     }
 
 
+    
+    public void Hit()
+    {
+        anim.SetTrigger(AnimationTags.HIT_TRIGGER);
+    }
 
+    public void KnockDown()
+    {
+        anim.SetTrigger(AnimationTags.KNOCK_DOWN_TRIGGER);
+    }
+
+    public void Death()
+    {
+        anim.SetTrigger(AnimationTags.DEATH_TRIGGER);
+    }
 
     public void Punch_1()
     {
