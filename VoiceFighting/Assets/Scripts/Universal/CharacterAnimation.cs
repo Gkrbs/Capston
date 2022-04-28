@@ -12,6 +12,15 @@ public class CharacterAnimation : MonoBehaviour
     }
 
 
+    public void Idle(bool idle)
+    {
+        anim.SetBool(AnimationTags.IDLE_ANIMATION, idle);
+    }
+
+    public void Run(bool run)
+    {
+        anim.SetBool(AnimationTags.RUN, run);
+    }
 
     public void Walk(bool walk)
     {

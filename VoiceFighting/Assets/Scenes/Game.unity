@@ -1304,6 +1304,58 @@ MonoBehaviour:
   right_Arm_Attack_Point: {fileID: 157955431}
   left_Leg_Attack_Point: {fileID: 485172489}
   right_Leg_Attack_Point: {fileID: 2100157120}
+--- !u!114 &408168988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408168978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 502d3b565f1abd643bbc105f4ba9f6da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LeftHandKey: 122
+  RightHandKey: 120
+  LeftLegKey: 99
+  RightLegKey: 118
+  LeftPunch:
+    name: LeftHand
+    length: 0.267
+  RightPunch:
+    name: RightHand
+    length: 0.3
+  LeftKick:
+    name: LeftLeg
+    length: 0.5
+  RightKick:
+    name: RightLeg
+    length: 0.7
+  combos:
+  - name: Skill
+    inputs:
+    - type: 0
+    - type: 1
+    - type: 2
+    comboAttack:
+      name: Skill
+      length: 0.667
+    onInputted:
+      m_PersistentCalls:
+        m_Calls: []
+  - name: combo
+    inputs:
+    - type: 0
+    - type: 1
+    - type: 0
+    comboAttack:
+      name: LRLpun
+      length: 1.1
+    onInputted:
+      m_PersistentCalls:
+        m_Calls: []
+  comboLeeway: 0.2
 --- !u!1001 &410361948
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4518,7 +4570,8 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 12
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 408168985, guid: d6d06c887a1aae94f8c6e8cc2c0c557b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d6d06c887a1aae94f8c6e8cc2c0c557b, type: 3}
 --- !u!4 &1825259148 stripped
 Transform:

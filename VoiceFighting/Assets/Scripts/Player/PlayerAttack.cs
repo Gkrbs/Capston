@@ -67,7 +67,7 @@ public class PlayerAttack : MonoBehaviour
 
 
         }
-        if (Input.GetKeyDown(KeyCode.X))
+        if (Input.GetKeyDown(KeyCode.C))
         {
             if (current_Combo_State == ComboState.KICK_2 ||
                 current_Combo_State == ComboState.PUNCH_3)
