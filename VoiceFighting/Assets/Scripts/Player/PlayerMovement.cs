@@ -27,12 +27,19 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        AnimatePlayerWalk();
+        if (GameController.instance.gamePlaying)
+        {
+            AnimatePlayerWalk();
+            defend();
+        }
     }
 
     void FixedUpdate()
     {
-        DetectMovement();
+        if (GameController.instance.gamePlaying)
+        {
+            DetectMovement();
+        }
     }
 
     void DetectMovement()
@@ -98,4 +105,15 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    void defend()
+    {
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            player_Anim.Defend(true);
+        }
+        if (Input.GetKeyUp(KeyCode.DownArrow))
+        {
+            player_Anim.Defend(false);
+        }
+    }
 }

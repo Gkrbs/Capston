@@ -8,6 +8,7 @@ public class AnimationTags
     public const string RUN = "Run";
     public const string BACK = "Back";
     public const string JUMP = "Jump";
+    public const string DEFEND = "Defend";
 
     public const string PUNCH_1_TRIGGER = "Punch1";
     public const string PUNCH_2_TRIGGER = "Punch2";

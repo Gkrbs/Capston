@@ -37,7 +37,10 @@ public class CharacterAnimation : MonoBehaviour
         anim.SetBool(AnimationTags.JUMP, jump);
     }
 
-
+    public void Defend(bool defend)
+    {
+        anim.SetBool(AnimationTags.DEFEND, defend);
+    }
     
     public void Hit()
     {

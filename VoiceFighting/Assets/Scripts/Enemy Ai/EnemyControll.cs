@@ -14,16 +14,18 @@ public class EnemyControll : MonoBehaviour
     
     void Start()
     {
-        _transform = this.gameObject.GetComponent<Transform>();
-        playerTransform = GameObject.FindWithTag("Player").GetComponent<Transform>();
-        nvAgent = this.gameObject.GetComponent<NavMeshAgent>();
-
-        nvAgent.destination = playerTransform.position;
     }
 
    
     void Update()
     {
-        
+        if (GameController.instance.gamePlaying)
+        {
+            _transform = this.gameObject.GetComponent<Transform>();
+            playerTransform = GameObject.FindWithTag("Player").GetComponent<Transform>();
+            nvAgent = this.gameObject.GetComponent<NavMeshAgent>();
+
+            nvAgent.destination = playerTransform.position;
+        }
     }
 }
