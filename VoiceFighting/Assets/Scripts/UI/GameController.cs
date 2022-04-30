@@ -11,6 +11,12 @@ public class GameController : MonoBehaviour
 
     public GameObject hudContainer, gameOverPanel;
     public Text timeCounter, countdownText;
+
+    public GameObject OptionScreen;
+    public Button quitButton, backButton;
+
+    public float optionTime = 0, backTime = 0, inerval = 0;
+
     public bool gamePlaying { get; private set; }
     public int countdownTime;
 
@@ -39,11 +45,16 @@ public class GameController : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            OnButtonOption();
+        }
+
         if (gamePlaying)
         {
-            
+
             elapsedTime = Time.time - startTime;
-            elapsedTime -= 120;
+            elapsedTime -= 120 + inerval;
             timePlaying = TimeSpan.FromSeconds(elapsedTime);
             if (elapsedTime >= -61)
             {
@@ -51,13 +62,22 @@ public class GameController : MonoBehaviour
             }
             string timePlayingStr = timePlaying.ToString("ss");
             timeCounter.text = timePlayingStr;
-            
+
         }
     }
 
+    private void Win()
+    {
+
+    }
+    private void Defeat()
+    {
+
+    }
     private void EndGame()
     {
         gamePlaying = false;
+
         Invoke("ShowGameOverScreen", 1.25f);
     }
 
@@ -84,8 +104,26 @@ public class GameController : MonoBehaviour
         countdownText.gameObject.SetActive(false);
     }
 
-    public void OnButtonGoMain()
+    public void OnButtonOption()
     {
+        optionTime = Time.time;
+        gamePlaying = false;
+        OptionScreen.SetActive(true);
+        backButton.Select();
+    }
+
+    public void OnButtonBack()
+    {
+        backTime = Time.time;
+        gamePlaying = true;
+        OptionScreen.SetActive(false);
+        inerval = backTime - optionTime;
+    }
+
+    public void OnButtonQuit()
+    {
+        gamePlaying = false;
         SceneManager.LoadScene("Start");
     }
+
 }
