@@ -539,7 +539,7 @@ GameObject:
   - component: {fileID: 408168981}
   - component: {fileID: 408168982}
   - component: {fileID: 408168984}
-  - component: {fileID: 408168985}
+  - component: {fileID: 408168988}
   m_Layer: 9
   m_Name: BasicMotionsDummy
   m_TagString: Player
@@ -597,7 +597,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 120
+  m_Constraints: 124
   m_CollisionDetection: 0
 --- !u!136 &408168981
 CapsuleCollider:
@@ -609,7 +609,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.4
+  m_Radius: 0.1
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
@@ -637,12 +637,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9c6be3824ef00749a8500aa802eb3eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  intervalOfDoubleTap: 0.2
+  lastTapTime: 0
   move_Speed: 0
   walk_Speed: 2
   run_Speed: 4
-  jump_Speed: 5
-  distToGround: 1
---- !u!114 &408168985
+--- !u!114 &408168988
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -651,9 +651,60 @@ MonoBehaviour:
   m_GameObject: {fileID: 1260597861999642}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2e5380a222cd864c84dcf6eb0dac961, type: 3}
+  m_Script: {fileID: 11500000, guid: 502d3b565f1abd643bbc105f4ba9f6da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LeftHandKey: 122
+  RightHandKey: 120
+  LeftLegKey: 99
+  RightLegKey: 118
+  LeftPunch:
+    name: LeftHand
+    length: 0.267
+  RightPunch:
+    name: RightHand
+    length: 0.3
+  LeftKick:
+    name: LeftLeg
+    length: 0.5
+  RightKick:
+    name: RightLeg
+    length: 0.7
+  combos:
+  - name: Skill
+    inputs:
+    - type: 0
+    - type: 1
+    - type: 2
+    comboAttack:
+      name: Skill
+      length: 0.667
+    onInputted:
+      m_PersistentCalls:
+        m_Calls: []
+  - name: combo
+    inputs:
+    - type: 0
+    - type: 1
+    - type: 0
+    comboAttack:
+      name: LRLpun
+      length: 1.1
+    onInputted:
+      m_PersistentCalls:
+        m_Calls: []
+  - name: Spinning
+    inputs:
+    - type: 2
+    - type: 2
+    - type: 2
+    comboAttack:
+      name: Spinning
+      length: 1.1
+    onInputted:
+      m_PersistentCalls:
+        m_Calls: []
+  comboLeeway: 0.15
 --- !u!1 &1261804499409134
 GameObject:
   m_ObjectHideFlags: 0
@@ -2033,8 +2084,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6360836036825660896}
-  - component: {fileID: 187307182510118550}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Left Hand Attack Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2055,18 +2105,6 @@ Transform:
   m_Father: {fileID: 4073143491986198}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &187307182510118550
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519196202946285409}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7eec499f2b5d0e458be3d9777a681ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &3755936996528713618
 GameObject:
   m_ObjectHideFlags: 0
@@ -2076,7 +2114,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2670641731496862995}
-  - component: {fileID: 1929777585340527944}
   m_Layer: 0
   m_Name: Right Hand Attack Point
   m_TagString: Untagged
@@ -2098,18 +2135,6 @@ Transform:
   m_Father: {fileID: 4741556435874038}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1929777585340527944
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3755936996528713618}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7eec499f2b5d0e458be3d9777a681ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &4408529143413910281
 GameObject:
   m_ObjectHideFlags: 0
@@ -2503,7 +2528,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2977458560107517962}
-  - component: {fileID: 732100555626730927}
   m_Layer: 0
   m_Name: Right Leg Attack Point
   m_TagString: Untagged
@@ -2525,18 +2549,6 @@ Transform:
   m_Father: {fileID: 4884161282091988}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &732100555626730927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4442489190883806612}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7eec499f2b5d0e458be3d9777a681ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7546509535999261321
 GameObject:
   m_ObjectHideFlags: 0
@@ -2546,8 +2558,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4513776177342956781}
-  - component: {fileID: 1337795928599396262}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Left Leg Attack Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2568,15 +2579,3 @@ Transform:
   m_Father: {fileID: 4903942536010136}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1337795928599396262
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7546509535999261321}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7eec499f2b5d0e458be3d9777a681ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

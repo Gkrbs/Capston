@@ -10,6 +10,8 @@ public class GameController : MonoBehaviour
     public static GameController instance;
 
     public GameObject hudContainer, gameOverPanel;
+    public GameObject win, defeat, draw;
+
     public Text timeCounter, countdownText;
 
     public GameObject OptionScreen;
@@ -20,9 +22,21 @@ public class GameController : MonoBehaviour
     public bool gamePlaying { get; private set; }
     public int countdownTime;
 
-
     private float startTime, elapsedTime;
     TimeSpan timePlaying;
+
+
+    public Image playerHealthBarIMAG, enemyHealthBarIMAG;
+    public static bool isGameOver;
+
+    [Space]
+    [Range(0, 100f)]
+    public float playerHealth = 100f;
+    [Range(0, 100f)]
+    public float enemyHealth = 100f;
+    float playerHealthValue;
+    float enemyHealthValue;
+
 
     private void Awake()
     {
@@ -34,17 +48,17 @@ public class GameController : MonoBehaviour
         gameOverPanel.SetActive(false);
         timeCounter.text = "60";
         gamePlaying = false;
+        isGameOver = false;
         StartCoroutine(CountdownToStart());
-    }
-
-    private void BeginGame()
-    {
-        gamePlaying = true;
-        startTime = Time.time;
     }
 
     private void Update()
     {
+        playerHealthValue = playerHealth * .01f;
+        playerHealthBarIMAG.fillAmount = playerHealthValue;
+        enemyHealthValue = enemyHealth * .01f;
+        enemyHealthBarIMAG.fillAmount = enemyHealthValue;
+
         if (Input.GetKey(KeyCode.Escape))
         {
             OnButtonOption();
@@ -52,7 +66,10 @@ public class GameController : MonoBehaviour
 
         if (gamePlaying)
         {
-
+            if (playerHealth == 0 || enemyHealth == 0)
+            {
+                EndGame();
+            }
             elapsedTime = Time.time - startTime;
             elapsedTime -= 120 + inerval;
             timePlaying = TimeSpan.FromSeconds(elapsedTime);
@@ -66,19 +83,54 @@ public class GameController : MonoBehaviour
         }
     }
 
-    private void Win()
-    {
 
-    }
-    private void Defeat()
-    {
 
+
+    private void BeginGame()
+    {
+        gamePlaying = true;
+        startTime = Time.time;
     }
+
     private void EndGame()
     {
         gamePlaying = false;
+        if (playerHealth == enemyHealth)
+        {
+            Draw();
+        }
+        else if (playerHealth < enemyHealth)
+        {
+            Defeat();
+        }
+        else if(enemyHealth < playerHealth)
+        {
+            Win();
+        }
+        
 
-        Invoke("ShowGameOverScreen", 1.25f);
+        Invoke("ShowGameOverScreen", 1f);
+    }
+
+    private void Win()
+    {
+        win.SetActive(true);
+        defeat.SetActive(false);
+        draw.SetActive(false);
+    }
+
+    private void Defeat()
+    {
+        win.SetActive(false);
+        defeat.SetActive(true);
+        draw.SetActive(false);
+    }
+
+    private void Draw()
+    {
+        win.SetActive(false);
+        defeat.SetActive(false);
+        draw.SetActive(true);
     }
 
     private void ShowGameOverScreen()
@@ -124,6 +176,15 @@ public class GameController : MonoBehaviour
     {
         gamePlaying = false;
         SceneManager.LoadScene("Start");
+    }
+
+    public void TakeDamage(int damageAmount)
+    {
+        playerHealth -= damageAmount;
+        if (playerHealth <= 0)
+        {
+            isGameOver = true;
+        }
     }
 
 }
