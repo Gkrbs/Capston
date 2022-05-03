@@ -21,14 +21,6 @@ public class EnemyControll : MonoBehaviour
     void Start()
     {
 
-        _transform = this.gameObject.GetComponent<Transform>();
-        playerTransform = GameObject.FindWithTag("Player").GetComponent<Transform>();
-        nvAgent = this.gameObject.GetComponent<NavMeshAgent>();
-        _animator = this.gameObject.GetComponent<Animator>();
-
-        StartCoroutine(this.CheckState());
-        StartCoroutine(this.CheckStateForAction());
-
 
     }
 
@@ -85,7 +77,16 @@ public class EnemyControll : MonoBehaviour
 
     void Update()
     {
+        if (GameController.instance.gamePlaying)
+        {
+            _transform = this.gameObject.GetComponent<Transform>();
+            playerTransform = GameObject.FindWithTag("Player").GetComponent<Transform>();
+            nvAgent = this.gameObject.GetComponent<NavMeshAgent>();
+            _animator = this.gameObject.GetComponent<Animator>();
 
+            StartCoroutine(this.CheckState());
+            StartCoroutine(this.CheckStateForAction());
+        }
     }
 }
 
