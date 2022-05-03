@@ -620,7 +620,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 95695112}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.49490547, y: 2.9619384, z: -3.0755558}
+  m_LocalPosition: {x: 0.49490547, y: 2.9619384, z: -4.075556}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 505991721}
@@ -3241,7 +3241,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 928518402}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.49490547, y: 2.9619384, z: -3.0755558}
+  m_LocalPosition: {x: 0.49490547, y: 2.9619384, z: -4.075556}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 980408671}
@@ -3314,7 +3314,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 45.74733
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -6281,7 +6281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f70329d94ccd95f4995bdfa73155a692, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curState: 1
+  curState: 2
   traceDist: 15
   attackDist: 3.2
 --- !u!4 &1779356267 stripped
