@@ -4850,6 +4850,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
+    - target: {fileID: 124476609255150079, guid: d08d4f08745c5b2449471141764a8a21, type: 3}
+      propertyPath: sounds.Array.data[0].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 124476609255150079, guid: d08d4f08745c5b2449471141764a8a21, type: 3}
+      propertyPath: sounds.Array.data[1].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 124476609255150079, guid: d08d4f08745c5b2449471141764a8a21, type: 3}
+      propertyPath: sounds.Array.data[0].volume
+      value: 0.411
+      objectReference: {fileID: 0}
+    - target: {fileID: 124476609255150079, guid: d08d4f08745c5b2449471141764a8a21, type: 3}
+      propertyPath: sounds.Array.data[1].volume
+      value: 0.071
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d08d4f08745c5b2449471141764a8a21, type: 3}
 --- !u!4 &1293139034 stripped
@@ -6316,14 +6332,6 @@ PrefabInstance:
     - target: {fileID: 519196202946285409, guid: d6d06c887a1aae94f8c6e8cc2c0c557b, type: 3}
       propertyPath: m_IsActive
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Volume
-      value: 0.317
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_audioClip
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3755936996528713618, guid: d6d06c887a1aae94f8c6e8cc2c0c557b, type: 3}
       propertyPath: m_IsActive
