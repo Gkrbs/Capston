@@ -58,12 +58,20 @@ public class GameController : MonoBehaviour
         playerHealthBarIMAG.fillAmount = playerHealthValue;
         enemyHealthValue = enemyHealth * .01f;
         enemyHealthBarIMAG.fillAmount = enemyHealthValue;
-
+        
+        if(playerHealth <= 0f)
+        {
+            FindObjectOfType<AudioManager>().Play("playerDeath");
+        }
+        if (enemyHealth <= 0f)
+        {
+            FindObjectOfType<AudioManager>().Play("playerDeath");
+        }
         if (Input.GetKey(KeyCode.Escape))
         {
             OnButtonOption();
         }
-
+        
         if (gamePlaying)
         {
             if (playerHealth == 0 || enemyHealth == 0)
@@ -132,7 +140,7 @@ public class GameController : MonoBehaviour
         defeat.SetActive(false);
         draw.SetActive(true);
     }
-
+    
     private void ShowGameOverScreen()
     {
         gameOverPanel.SetActive(true);

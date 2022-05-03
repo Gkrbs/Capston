@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
         if (GameController.instance.gamePlaying)
         {
             AnimatePlayerWalk();
-            defend();
+            Defend();
         }
     }
 
@@ -105,7 +105,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void defend()
+    void Defend()
     {
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
