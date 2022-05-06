@@ -186,13 +186,5 @@ public class GameController : MonoBehaviour
         SceneManager.LoadScene("Start");
     }
 
-    public void TakeDamage(int damageAmount)
-    {
-        playerHealth -= damageAmount;
-        if (playerHealth <= 0)
-        {
-            isGameOver = true;
-        }
-    }
 
 }

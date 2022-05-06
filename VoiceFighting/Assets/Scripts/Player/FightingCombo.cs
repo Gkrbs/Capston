@@ -32,6 +32,9 @@ public class FightingCombo : MonoBehaviour
     float leeway = 0;
     bool skip = false;
 
+    public float cooldown = 1.5f;
+    private float lastAttackedAt = -9999f;
+
     void Start()
     {
         ani = GetComponent<Animator>();
@@ -54,6 +57,7 @@ public class FightingCombo : MonoBehaviour
 
     void Update()
     {
+
         if (curAttack != null)
         {
             if (timer > 0)
@@ -123,8 +127,12 @@ public class FightingCombo : MonoBehaviour
         foreach (int i in remove)
             currentCombos.RemoveAt(i);
 
-        if (currentCombos.Count <= 0)
-            Attack(getAttackFromType(input.type));
+        if (Time.time > lastAttackedAt + cooldown)
+        {
+            if (currentCombos.Count <= 0)
+                Attack(getAttackFromType(input.type));
+            lastAttackedAt = Time.time;
+        }
     }
 
     void ResetCombos()
@@ -145,7 +153,6 @@ public class FightingCombo : MonoBehaviour
         curAttack = att;
         timer = att.length;
         ani.Play(att.name, -1, 0);
-
     }
 
     Attack getAttackFromType(AttackType t)

@@ -49,12 +49,14 @@ public class PlayerMovement : MonoBehaviour
             myBody.velocity = new Vector2(Input.GetAxis(Axis.HORIZONTAL_AXIS) * (walk_Speed),
             myBody.velocity.y);
         }
+
         if (runnig)
         {
             myBody.velocity = new Vector2(Input.GetAxis(Axis.HORIZONTAL_AXIS) * (run_Speed),
             myBody.velocity.y);
         }
-        
+
+
     }
 
 

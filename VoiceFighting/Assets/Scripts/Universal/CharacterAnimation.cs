@@ -42,9 +42,9 @@ public class CharacterAnimation : MonoBehaviour
         anim.SetBool(AnimationTags.DEFEND, defend);
     }
     
-    public void Hit()
+    public void Hit(bool hit)
     {
-        anim.SetTrigger(AnimationTags.HIT_TRIGGER);
+        anim.SetBool(AnimationTags.HIT_TRIGGER, hit);
     }
 
     public void KnockDown()
