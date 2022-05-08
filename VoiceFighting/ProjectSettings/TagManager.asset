@@ -11,6 +11,8 @@ TagManager:
   - PlayerHitbox
   - PlayerAttackPoint
   - EnemyAttackPoint
+  - AudioManager
+  - Slider
   layers:
   - Default
   - TransparentFX

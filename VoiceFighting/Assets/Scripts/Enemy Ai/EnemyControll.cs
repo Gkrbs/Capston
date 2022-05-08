@@ -18,6 +18,8 @@ public class EnemyControll : MonoBehaviour
     public float attackDist = 3.2f;
     private bool isDead = false;
 
+    public new bool enabled = true;
+
     void Start()
     {
 
@@ -77,7 +79,7 @@ public class EnemyControll : MonoBehaviour
 
     void Update()
     {
-        if (GameController.instance.gamePlaying)
+        if (GameController.instance.gamePlaying && enabled)
         {
             _transform = this.gameObject.GetComponent<Transform>();
             playerTransform = GameObject.FindWithTag("Player").GetComponent<Transform>();

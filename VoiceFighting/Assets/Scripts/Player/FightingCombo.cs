@@ -32,7 +32,7 @@ public class FightingCombo : MonoBehaviour
     float leeway = 0;
     bool skip = false;
 
-    public float cooldown = 1.5f;
+    public float cooldown = 1.2f;
     private float lastAttackedAt = -9999f;
 
     void Start()
@@ -124,8 +124,8 @@ public class FightingCombo : MonoBehaviour
             }
         }
 
-        foreach (int i in remove)
-            currentCombos.RemoveAt(i);
+//        foreach (int i in remove)
+//            currentCombos.RemoveAt(i);
 
         if (Time.time > lastAttackedAt + cooldown)
         {

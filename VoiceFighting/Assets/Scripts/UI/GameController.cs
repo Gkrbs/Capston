@@ -29,6 +29,11 @@ public class GameController : MonoBehaviour
     public Image playerHealthBarIMAG, enemyHealthBarIMAG;
     public static bool isGameOver;
 
+    private CharacterAnimation player_Anim;
+
+    public Slider slider;
+    public FloatSO scoreSO;
+
     [Space]
     [Range(0, 100f)]
     public float playerHealth = 100f;
@@ -45,6 +50,7 @@ public class GameController : MonoBehaviour
 
     private void Start()
     {
+        player_Anim = GameObject.Find("Player").GetComponent<CharacterAnimation>();
         gameOverPanel.SetActive(false);
         timeCounter.text = "60";
         gamePlaying = false;
@@ -61,6 +67,7 @@ public class GameController : MonoBehaviour
         
         if(playerHealth <= 0f)
         {
+            player_Anim.Death(true);
             FindObjectOfType<AudioManager>().Play("playerDeath");
         }
         if (enemyHealth <= 0f)
@@ -76,7 +83,8 @@ public class GameController : MonoBehaviour
         {
             if (playerHealth == 0 || enemyHealth == 0)
             {
-                EndGame();
+                Invoke("EndGame", 2f);
+
             }
             elapsedTime = Time.time - startTime;
             elapsedTime -= 120 + inerval;
@@ -91,9 +99,6 @@ public class GameController : MonoBehaviour
         }
     }
 
-
-
-
     private void BeginGame()
     {
         gamePlaying = true;
@@ -102,22 +107,23 @@ public class GameController : MonoBehaviour
 
     private void EndGame()
     {
-        gamePlaying = false;
         if (playerHealth == enemyHealth)
         {
+            gamePlaying = false;
             Draw();
         }
         else if (playerHealth < enemyHealth)
         {
+            gamePlaying = false;
             Defeat();
         }
         else if(enemyHealth < playerHealth)
         {
+            gamePlaying = false;
             Win();
         }
-        
 
-        Invoke("ShowGameOverScreen", 1f);
+        ShowGameOverScreen();
     }
 
     private void Win()
@@ -168,6 +174,7 @@ public class GameController : MonoBehaviour
     {
         optionTime = Time.time;
         gamePlaying = false;
+        slider.value = scoreSO.Value;
         OptionScreen.SetActive(true);
         backButton.Select();
     }

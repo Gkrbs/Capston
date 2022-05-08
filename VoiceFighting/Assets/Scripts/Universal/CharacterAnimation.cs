@@ -42,9 +42,9 @@ public class CharacterAnimation : MonoBehaviour
         anim.SetBool(AnimationTags.DEFEND, defend);
     }
     
-    public void Hit(bool hit)
+    public void Hit()
     {
-        anim.SetBool(AnimationTags.HIT_TRIGGER, hit);
+        anim.SetTrigger(AnimationTags.HIT_TRIGGER);
     }
 
     public void KnockDown()
@@ -52,9 +52,9 @@ public class CharacterAnimation : MonoBehaviour
         anim.SetTrigger(AnimationTags.KNOCK_DOWN_TRIGGER);
     }
 
-    public void Death()
+    public void Death(bool death)
     {
-        anim.SetTrigger(AnimationTags.DEATH_TRIGGER);
+        anim.SetBool(AnimationTags.DEATH_TRIGGER, death);
     }
 
 } // class
