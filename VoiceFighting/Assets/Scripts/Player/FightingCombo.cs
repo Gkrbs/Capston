@@ -7,6 +7,7 @@ public enum AttackType { LeftHand = 0, RightHand = 1, LeftLeg = 2, RightLeg = 3 
 
 public class FightingCombo : MonoBehaviour
 {
+
     [Header("Inputs")]
     public KeyCode LeftHandKey;   //LeftHandKey
     public KeyCode RightHandKey;   //RightHandKey

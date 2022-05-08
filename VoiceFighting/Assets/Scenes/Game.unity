@@ -1455,6 +1455,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 124
   m_CollisionDetection: 0
+--- !u!114 &295825017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 295825010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e093be42e50b75048ae21d8b51e3cd7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &345112068 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4661435515762813124, guid: e289bf5debb17f6459818c207d781953, type: 3}
@@ -2890,6 +2902,8 @@ MonoBehaviour:
   countdownTime: 3
   playerHealthBarIMAG: {fileID: 1606159361}
   enemyHealthBarIMAG: {fileID: 472709531}
+  slider: {fileID: 1970189094}
+  scoreSO: {fileID: 11400000, guid: 91b0bfc5f278e554bba35d866b637f34, type: 2}
   playerHealth: 100
   enemyHealth: 100
 --- !u!1 &741953050
@@ -5117,7 +5131,6 @@ GameObject:
   - component: {fileID: 1303312028}
   - component: {fileID: 1303312027}
   - component: {fileID: 1303312026}
-  - component: {fileID: 1303312030}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -5209,19 +5222,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1303312030
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1303312025}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d0203549cf4fd248a32dfae5b6ca418, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioMixer: {fileID: 24100000, guid: 9c5f9c50c9b117d4592f6ef8360ca7bd, type: 2}
 --- !u!1001 &1303645236
 PrefabInstance:
   m_ObjectHideFlags: 0

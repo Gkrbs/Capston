@@ -22,7 +22,7 @@ public class AnimationTags
     public const string ATTACK_3_TRIGGER = "Attack3";
 
     public const string IDLE_ANIMATION = "Idle";
-
+    public const string SKILL_TRIGGER = "Skill";
     public const string KNOCK_DOWN_TRIGGER = "KnockDown";
     public const string STAND_UP_TRIGGER = "StandUp";
     public const string HIT_TRIGGER = "Hit";
