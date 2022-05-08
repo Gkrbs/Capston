@@ -6,6 +6,13 @@ TagManager:
   tags:
   - Floor
   - HealthUI
+  - Enemy
+  - EnemyHitbox
+  - PlayerHitbox
+  - PlayerAttackPoint
+  - EnemyAttackPoint
+  - AudioManager
+  - Slider
   layers:
   - Default
   - TransparentFX
@@ -20,7 +27,7 @@ TagManager:
   - Enemy
   - LeftArm
   - LeftLeg
-  - 
+  - Hitbox
   - 
   - 
   - 

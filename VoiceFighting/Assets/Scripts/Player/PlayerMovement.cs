@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     bool runnig = false;
     bool walking = false;
 
+    public new bool enabled = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,16 +28,16 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameController.instance.gamePlaying)
+        if (GameController.instance.gamePlaying && enabled)
         {
             AnimatePlayerWalk();
-            defend();
+            Defend();
         }
     }
 
     void FixedUpdate()
     {
-        if (GameController.instance.gamePlaying)
+        if (GameController.instance.gamePlaying && enabled)
         {
             DetectMovement();
         }
@@ -44,17 +45,19 @@ public class PlayerMovement : MonoBehaviour
 
     void DetectMovement()
     {
-        if (walking)
+        if (walking && enabled)
         {
             myBody.velocity = new Vector2(Input.GetAxis(Axis.HORIZONTAL_AXIS) * (walk_Speed),
             myBody.velocity.y);
         }
-        if (runnig)
+
+        if (runnig && enabled)
         {
             myBody.velocity = new Vector2(Input.GetAxis(Axis.HORIZONTAL_AXIS) * (run_Speed),
             myBody.velocity.y);
         }
-        
+
+
     }
 
 
@@ -105,14 +108,16 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void defend()
+    void Defend()
     {
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
+            enabled = false;
             player_Anim.Defend(true);
         }
         if (Input.GetKeyUp(KeyCode.DownArrow))
         {
+            enabled = true;
             player_Anim.Defend(false);
         }
     }

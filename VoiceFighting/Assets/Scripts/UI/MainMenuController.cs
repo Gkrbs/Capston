@@ -8,6 +8,9 @@ public class MainMenuController : MonoBehaviour
 {
     public GameObject mainScreen, OptionScreen;
     public Button playButton, backButton;
+    public Slider slider;
+    public FloatSO scoreSO;
+
 
     private void Start()
     {
@@ -26,6 +29,7 @@ public class MainMenuController : MonoBehaviour
     public void OnButtonOption()
     {
         mainScreen.SetActive(false);
+        slider.value = scoreSO.Value;
         OptionScreen.SetActive(true);
         backButton.Select();
     }

@@ -29,6 +29,11 @@ public class GameController : MonoBehaviour
     public Image playerHealthBarIMAG, enemyHealthBarIMAG;
     public static bool isGameOver;
 
+    private CharacterAnimation player_Anim;
+
+    public Slider slider;
+    public FloatSO scoreSO;
+
     [Space]
     [Range(0, 100f)]
     public float playerHealth = 100f;
@@ -45,6 +50,7 @@ public class GameController : MonoBehaviour
 
     private void Start()
     {
+        player_Anim = GameObject.Find("Player").GetComponent<CharacterAnimation>();
         gameOverPanel.SetActive(false);
         timeCounter.text = "60";
         gamePlaying = false;
@@ -58,17 +64,27 @@ public class GameController : MonoBehaviour
         playerHealthBarIMAG.fillAmount = playerHealthValue;
         enemyHealthValue = enemyHealth * .01f;
         enemyHealthBarIMAG.fillAmount = enemyHealthValue;
-
+        
+        if(playerHealth <= 0f)
+        {
+            player_Anim.Death(true);
+            FindObjectOfType<AudioManager>().Play("playerDeath");
+        }
+        if (enemyHealth <= 0f)
+        {
+            FindObjectOfType<AudioManager>().Play("playerDeath");
+        }
         if (Input.GetKey(KeyCode.Escape))
         {
             OnButtonOption();
         }
-
+        
         if (gamePlaying)
         {
             if (playerHealth == 0 || enemyHealth == 0)
             {
-                EndGame();
+                Invoke("EndGame", 2f);
+
             }
             elapsedTime = Time.time - startTime;
             elapsedTime -= 120 + inerval;
@@ -83,9 +99,6 @@ public class GameController : MonoBehaviour
         }
     }
 
-
-
-
     private void BeginGame()
     {
         gamePlaying = true;
@@ -94,22 +107,23 @@ public class GameController : MonoBehaviour
 
     private void EndGame()
     {
-        gamePlaying = false;
         if (playerHealth == enemyHealth)
         {
+            gamePlaying = false;
             Draw();
         }
         else if (playerHealth < enemyHealth)
         {
+            gamePlaying = false;
             Defeat();
         }
         else if(enemyHealth < playerHealth)
         {
+            gamePlaying = false;
             Win();
         }
-        
 
-        Invoke("ShowGameOverScreen", 1f);
+        ShowGameOverScreen();
     }
 
     private void Win()
@@ -132,7 +146,7 @@ public class GameController : MonoBehaviour
         defeat.SetActive(false);
         draw.SetActive(true);
     }
-
+    
     private void ShowGameOverScreen()
     {
         gameOverPanel.SetActive(true);
@@ -160,6 +174,7 @@ public class GameController : MonoBehaviour
     {
         optionTime = Time.time;
         gamePlaying = false;
+        slider.value = scoreSO.Value;
         OptionScreen.SetActive(true);
         backButton.Select();
     }
@@ -178,13 +193,5 @@ public class GameController : MonoBehaviour
         SceneManager.LoadScene("Start");
     }
 
-    public void TakeDamage(int damageAmount)
-    {
-        playerHealth -= damageAmount;
-        if (playerHealth <= 0)
-        {
-            isGameOver = true;
-        }
-    }
 
 }
