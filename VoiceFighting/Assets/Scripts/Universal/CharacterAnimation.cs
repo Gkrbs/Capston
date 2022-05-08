@@ -47,6 +47,7 @@ public class CharacterAnimation : MonoBehaviour
         anim.SetTrigger(AnimationTags.HIT_TRIGGER);
     }
 
+
     public void KnockDown()
     {
         anim.SetTrigger(AnimationTags.KNOCK_DOWN_TRIGGER);

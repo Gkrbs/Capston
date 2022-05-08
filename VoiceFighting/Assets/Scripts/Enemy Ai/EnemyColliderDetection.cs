@@ -10,7 +10,6 @@ public class EnemyColliderDetection : MonoBehaviour
 
     public bool touch = false;
 
-
     void Start()
     {
         player_Anim = GameObject.Find("Player").GetComponent<CharacterAnimation>();

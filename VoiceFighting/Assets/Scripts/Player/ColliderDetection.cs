@@ -16,7 +16,6 @@ public class ColliderDetection : MonoBehaviour
         enemy_Move = GameObject.Find("Enemy").GetComponent<EnemyControll>();
     }
 
-
     IEnumerator ExampleCoroutine()
     {
         yield return new WaitForSeconds(1f);
@@ -32,6 +31,7 @@ public class ColliderDetection : MonoBehaviour
             enemy_Move.enabled = true;
         }
     }
+
     void HitAnim()
     {
         FindObjectOfType<AudioManager>().Play("Hit");
