@@ -174,7 +174,9 @@ public class GameController : MonoBehaviour
     {
         optionTime = Time.time;
         gamePlaying = false;
+
         slider.value = scoreSO.Value;
+
         OptionScreen.SetActive(true);
         backButton.Select();
     }
