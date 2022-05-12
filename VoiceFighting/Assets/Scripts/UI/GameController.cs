@@ -30,6 +30,7 @@ public class GameController : MonoBehaviour
     public static bool isGameOver;
 
     private CharacterAnimation player_Anim;
+    private CharacterAnimation enemy_Anim;
 
     public Slider slider;
     public FloatSO scoreSO;
@@ -51,6 +52,8 @@ public class GameController : MonoBehaviour
     private void Start()
     {
         player_Anim = GameObject.Find("Player").GetComponent<CharacterAnimation>();
+        enemy_Anim = GameObject.Find("Player").GetComponent<CharacterAnimation>();
+
         gameOverPanel.SetActive(false);
         timeCounter.text = "60";
         gamePlaying = false;
@@ -62,16 +65,20 @@ public class GameController : MonoBehaviour
     {
         playerHealthValue = playerHealth * .01f;
         playerHealthBarIMAG.fillAmount = playerHealthValue;
+
         enemyHealthValue = enemyHealth * .01f;
         enemyHealthBarIMAG.fillAmount = enemyHealthValue;
         
         if(playerHealth <= 0f)
         {
+            playerHealth = 0f;
             player_Anim.Death(true);
             FindObjectOfType<AudioManager>().Play("playerDeath");
         }
         if (enemyHealth <= 0f)
         {
+            enemyHealth = 0f;
+            enemy_Anim.Death(true);
             FindObjectOfType<AudioManager>().Play("playerDeath");
         }
         if (Input.GetKey(KeyCode.Escape))
@@ -83,8 +90,7 @@ public class GameController : MonoBehaviour
         {
             if (playerHealth == 0 || enemyHealth == 0)
             {
-                Invoke("EndGame", 2f);
-
+                EndGame();
             }
             elapsedTime = Time.time - startTime;
             elapsedTime -= 120 + inerval;
@@ -109,20 +115,16 @@ public class GameController : MonoBehaviour
     {
         if (playerHealth == enemyHealth)
         {
-            gamePlaying = false;
             Draw();
         }
         else if (playerHealth < enemyHealth)
         {
-            gamePlaying = false;
             Defeat();
         }
         else if(enemyHealth < playerHealth)
         {
-            gamePlaying = false;
             Win();
         }
-
         ShowGameOverScreen();
     }
 

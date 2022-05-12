@@ -22,11 +22,14 @@ public class AnimationTags
     public const string ATTACK_3_TRIGGER = "Attack3";
 
     public const string IDLE_ANIMATION = "Idle";
-    public const string SKILL_TRIGGER = "Skill";
     public const string KNOCK_DOWN_TRIGGER = "KnockDown";
     public const string STAND_UP_TRIGGER = "StandUp";
     public const string HIT_TRIGGER = "Hit";
     public const string DEATH_TRIGGER = "Death";
+
+    public const string SKILL_TRIGGER1 = "Skill1";
+    public const string SKILL_TRIGGER2 = "Skill2";
+    public const string SKILL_TRIGGER3 = "Skill3";
 }
 
 public class Axis

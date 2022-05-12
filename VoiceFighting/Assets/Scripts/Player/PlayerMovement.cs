@@ -31,7 +31,6 @@ public class PlayerMovement : MonoBehaviour
         if (GameController.instance.gamePlaying && enabled)
         {
             AnimatePlayerWalk();
-            Defend();
         }
     }
 
@@ -108,17 +107,4 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void Defend()
-    {
-        if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            enabled = false;
-            player_Anim.Defend(true);
-        }
-        if (Input.GetKeyUp(KeyCode.DownArrow))
-        {
-            enabled = true;
-            player_Anim.Defend(false);
-        }
-    }
 }

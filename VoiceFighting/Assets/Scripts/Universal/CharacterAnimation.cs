@@ -58,9 +58,20 @@ public class CharacterAnimation : MonoBehaviour
         anim.SetBool(AnimationTags.DEATH_TRIGGER, death);
     }
 
-    public void Skill()
+
+
+
+    public void Skill1()
     {
-        anim.SetTrigger(AnimationTags.SKILL_TRIGGER);
+        anim.SetTrigger(AnimationTags.SKILL_TRIGGER1);
     }
 
+    public void Skill2()
+    {
+        anim.SetTrigger(AnimationTags.SKILL_TRIGGER2);
+    }
+    public void Skill3()
+    {
+        anim.SetTrigger(AnimationTags.SKILL_TRIGGER3);
+    }
 } // class

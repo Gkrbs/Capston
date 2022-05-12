@@ -10,10 +10,20 @@ public class VoiceControl : MonoBehaviour
     private Dictionary<string, System.Action> actions = new Dictionary<string, System.Action>();
     private CharacterAnimation anim;
 
+    private CharacterAnimation enemy_Anim;
+    private EnemyControll enemy_Move;
+
+    public bool touch = false;
+
     void Start()
     {
+        enemy_Anim = GameObject.Find("Enemy").GetComponent<CharacterAnimation>();
+        enemy_Move = GameObject.Find("Enemy").GetComponent<EnemyControll>();
+
         anim = GameObject.Find("Player").GetComponent<CharacterAnimation>();
-        actions.Add("combo", skill);
+        actions.Add("combo", skill1);
+        actions.Add("cap", skill2);
+        actions.Add("no", skill3);
 
         keywordRecognizer = new KeywordRecognizer(actions.Keys.ToArray());
         keywordRecognizer.OnPhraseRecognized += RecognizedSpeech;
@@ -27,8 +37,19 @@ public class VoiceControl : MonoBehaviour
         actions[speech.text].Invoke();
     }
 
-    private void skill()
+    private void skill1()
     {
-        anim.Skill();
+        anim.Skill1();
     }
+
+    private void skill2()
+    {
+        anim.Skill2();
+    }
+
+    private void skill3()
+    {
+        anim.Skill3();
+    }
+
 }

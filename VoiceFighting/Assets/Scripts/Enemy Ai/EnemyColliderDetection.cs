@@ -42,6 +42,6 @@ public class EnemyColliderDetection : MonoBehaviour
     {
         player_Move.enabled = false;
         touch = true;
-        GameController.instance.playerHealth -= 1f;
+        GameController.instance.playerHealth -= 5f;
     }
 }

@@ -620,7 +620,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 95695112}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.51675725, y: 2.9619384, z: -4.075556}
+  m_LocalPosition: {x: 0.61996734, y: 2.9619384, z: -4.075556}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 505991721}
@@ -1861,6 +1861,18 @@ PrefabInstance:
     - target: {fileID: 4759721911903040, guid: 4d71524bb97748c408fbcd7c7397f422, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2859545736808364018, guid: 4d71524bb97748c408fbcd7c7397f422, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.35045782
+      objectReference: {fileID: 0}
+    - target: {fileID: 2859545736808364018, guid: 4d71524bb97748c408fbcd7c7397f422, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.24253927
+      objectReference: {fileID: 0}
+    - target: {fileID: 2859545736808364018, guid: 4d71524bb97748c408fbcd7c7397f422, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0000000012545
       objectReference: {fileID: 0}
     - target: {fileID: 4513776177342956781, guid: 4d71524bb97748c408fbcd7c7397f422, type: 3}
       propertyPath: m_LocalScale.z
@@ -3474,7 +3486,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 928518402}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.51675725, y: 2.9619384, z: -4.075556}
+  m_LocalPosition: {x: 0.61996734, y: 2.9619384, z: -4.075556}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 980408671}
@@ -3547,7 +3559,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 45.448074
+  field of view: 44.025806
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -6421,7 +6433,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4759721911903040, guid: d6d06c887a1aae94f8c6e8cc2c0c557b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.1
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 4759721911903040, guid: d6d06c887a1aae94f8c6e8cc2c0c557b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6954,7 +6966,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1987727647}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.5, z: 0.05}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
