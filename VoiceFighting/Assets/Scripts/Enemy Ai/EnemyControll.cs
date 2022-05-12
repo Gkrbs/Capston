@@ -9,7 +9,6 @@ public class EnemyControll : MonoBehaviour
     public enum CurrentState { idle, trace, kick, punch, dead };
     public CurrentState curState = CurrentState.idle;
 
-
     private Transform _transform;
     private Transform playerTransform;
     private NavMeshAgent nvAgent;
@@ -32,10 +31,9 @@ public class EnemyControll : MonoBehaviour
         direction = playerTransform.position - this.transform.position;
         direction.y = 0;
         this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.LookRotation(direction), 0.3f);
-
+        
         StartCoroutine(this.CheckState());
         StartCoroutine(this.CheckStateForAction());
-
 
     }
 
@@ -112,7 +110,6 @@ public class EnemyControll : MonoBehaviour
                     break;
                 case CurrentState.punch:
                     int b = Random.Range(0, 2);
-
                     switch (b)
                     {
                         case 0:
