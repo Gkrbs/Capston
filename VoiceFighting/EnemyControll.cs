@@ -7,7 +7,7 @@ public class EnemyControll : MonoBehaviour
 {
 
     public enum CurrentState { idle, trace, kick, punch, dead };
-    public CurrentState curState = CurrentState.trace;
+    public CurrentState curState = CurrentState.idle;
   
 
     private Transform _transform;
@@ -78,6 +78,7 @@ public class EnemyControll : MonoBehaviour
                 case CurrentState.idle:
                     nvAgent.Stop();
                     _animator.SetBool("IsTrace", false);
+                    yield return new WaitForSeconds(3.5f);
                     break;
                 case CurrentState.trace:
                     nvAgent.destination = playerTransform.position;
@@ -94,6 +95,7 @@ public class EnemyControll : MonoBehaviour
                             _animator.SetBool("Isleftkick", true);
                             yield return new WaitForSeconds(2.5f);
                             _animator.SetBool("Isleftkick", false);
+                            _animator.SetBool("IsTrace", false);
                             break;
                         case 1:
                             _animator.SetBool("Isrightkick", true);
@@ -101,6 +103,8 @@ public class EnemyControll : MonoBehaviour
                             yield return new WaitForSeconds(2.5f);
 
                             _animator.SetBool("Isrightkick", false);
+
+
 
                             break;
                         
@@ -115,6 +119,7 @@ public class EnemyControll : MonoBehaviour
                             _animator.SetBool("Islefthook", true);
                             yield return new WaitForSeconds(2.5f);
                             _animator.SetBool("Islefthook", false);
+                            _animator.SetBool("IsTrace", false);
                             break;
                         case 1:
                             _animator.SetBool("Isrightpunch", true);
@@ -122,6 +127,8 @@ public class EnemyControll : MonoBehaviour
                             yield return new WaitForSeconds(2.5f);
 
                             _animator.SetBool("Isrightpunch", false);
+
+                            _animator.SetBool("IsTrace", false);
 
                             break;
 
