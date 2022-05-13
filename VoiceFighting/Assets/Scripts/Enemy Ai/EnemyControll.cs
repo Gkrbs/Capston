@@ -8,6 +8,7 @@ public class EnemyControll : MonoBehaviour
 
     public enum CurrentState { idle, trace, kick, punch, dead };
     public CurrentState curState = CurrentState.idle;
+    private CharacterAnimation enemy_Anim;
 
     private Transform _transform;
     private Transform playerTransform;
@@ -22,6 +23,7 @@ public class EnemyControll : MonoBehaviour
 
     void Start()
     {
+        enemy_Anim = GameObject.Find("Enemy").GetComponent<CharacterAnimation>();
 
         _transform = this.gameObject.GetComponent<Transform>();
         playerTransform = GameObject.FindWithTag("Player").GetComponent<Transform>();
@@ -41,6 +43,10 @@ public class EnemyControll : MonoBehaviour
     {
         while (!isDead)
         {
+            if(GameController.instance.enemyHealth <= 0f)
+            {
+                isDead = true;
+            }
             yield return new WaitForSeconds(0.2f);
 
             float dist = Vector3.Distance(playerTransform.position, _transform.position);

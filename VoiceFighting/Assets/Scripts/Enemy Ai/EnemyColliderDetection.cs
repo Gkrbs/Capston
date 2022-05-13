@@ -34,6 +34,11 @@ public class EnemyColliderDetection : MonoBehaviour
 
     void HitAnim()
     {
+        if (GameController.instance.playerHealth <= 0f)
+        {
+            player_Anim.Death();
+            FindObjectOfType<AudioManager>().Play("playerDeath");
+        }
         FindObjectOfType<AudioManager>().Play("Hit");
         player_Anim.Hit();
         Invoke("ExampleCoroutine", 1f);

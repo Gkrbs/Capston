@@ -32,6 +32,15 @@ public class GameController : MonoBehaviour
     private CharacterAnimation player_Anim;
     private CharacterAnimation enemy_Anim;
 
+    public bool isDead
+    {
+        get
+        {
+            return playerHealth == 0;
+        }
+    }
+
+
     public Slider slider;
     public FloatSO scoreSO;
 
@@ -72,14 +81,10 @@ public class GameController : MonoBehaviour
         if(playerHealth <= 0f)
         {
             playerHealth = 0f;
-            player_Anim.Death(true);
-            FindObjectOfType<AudioManager>().Play("playerDeath");
         }
         if (enemyHealth <= 0f)
         {
             enemyHealth = 0f;
-            enemy_Anim.Death(true);
-            FindObjectOfType<AudioManager>().Play("playerDeath");
         }
         if (Input.GetKey(KeyCode.Escape))
         {
@@ -113,6 +118,7 @@ public class GameController : MonoBehaviour
 
     private void EndGame()
     {
+        gamePlaying = false;
         if (playerHealth == enemyHealth)
         {
             Draw();

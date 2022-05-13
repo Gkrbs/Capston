@@ -5,6 +5,7 @@ using UnityEngine;
 public class ColliderDetection : MonoBehaviour
 {
     private CharacterAnimation enemy_Anim;
+    private CharacterAnimation player_Anim;
 
     private EnemyControll enemy_Move;
 
@@ -34,6 +35,11 @@ public class ColliderDetection : MonoBehaviour
 
     void HitAnim()
     {
+        if (GameController.instance.enemyHealth <= 0f)
+        {
+            enemy_Anim.Death();
+            FindObjectOfType<AudioManager>().Play("playerDeath");
+        }
         FindObjectOfType<AudioManager>().Play("Hit");
         enemy_Anim.Hit();
         Invoke("ExampleCoroutine", 1f);

@@ -53,9 +53,9 @@ public class CharacterAnimation : MonoBehaviour
         anim.SetTrigger(AnimationTags.KNOCK_DOWN_TRIGGER);
     }
 
-    public void Death(bool death)
+    public void Death()
     {
-        anim.SetBool(AnimationTags.DEATH_TRIGGER, death);
+        anim.SetTrigger(AnimationTags.DEATH_TRIGGER);
     }
 
 
