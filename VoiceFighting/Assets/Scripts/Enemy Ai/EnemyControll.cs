@@ -82,7 +82,7 @@ public class EnemyControll : MonoBehaviour
                 case CurrentState.idle:
                     nvAgent.isStopped = true;
                     _animator.SetBool("IsTrace", false);
-                    yield return new WaitForSeconds(3.5f);
+                    yield return new WaitForSeconds(3f);
                     break;
                 case CurrentState.trace:
                     nvAgent.destination = playerTransform.position;
@@ -92,49 +92,35 @@ public class EnemyControll : MonoBehaviour
                     break;
                 case CurrentState.kick:
                     int a = Random.Range(0, 2);
-
+                    _animator.SetBool("IsTrace", false);
                     switch (a)
                     {
                         case 0:
-                            _animator.SetBool("Isleftkick", true);
-                            yield return new WaitForSeconds(1.2f);
-                            _animator.SetBool("Isleftkick", false);
-                            _animator.SetBool("IsTrace", false);
+                            _animator.SetTrigger("Isleftkick");
+                            yield return new WaitForSeconds(1.5f);
                             break;
                         case 1:
-                            _animator.SetBool("Isrightkick", true);
-
-                            yield return new WaitForSeconds(1.2f);
-
-                            _animator.SetBool("Isrightkick", false);
-
-
-
+                            _animator.SetTrigger("Isrightkick");
+                            yield return new WaitForSeconds(1.5f);
                             break;
 
                     }
                     break;
                 case CurrentState.punch:
                     int b = Random.Range(0, 2);
+                    _animator.SetBool("IsTrace", false);
                     switch (b)
                     {
                         case 0:
-                            _animator.SetBool("Islefthook", true);
-                            yield return new WaitForSeconds(1.2f);
-                            _animator.SetBool("Islefthook", false);
-                            _animator.SetBool("IsTrace", false);
+                            _animator.SetTrigger("Islefthook");
+                            yield return new WaitForSeconds(1.5f);
                             break;
                         case 1:
-                            _animator.SetBool("Isrightpunch", true);
-
-                            yield return new WaitForSeconds(1.2f);
-
-                            _animator.SetBool("Isrightpunch", false);
+                            _animator.SetTrigger("Isrightpunch");
+                            yield return new WaitForSeconds(1.5f);
 
                             _animator.SetBool("IsTrace", false);
-
                             break;
-
                     }
                     break;
 
