@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameController.instance.gamePlaying && enabled)
+        if (GameController.instance.gamePlaying && !EnemyColliderDetection.instance.touch)
         {
             AnimatePlayerWalk();
         }
@@ -36,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (GameController.instance.gamePlaying && enabled)
+        if (GameController.instance.gamePlaying && !EnemyColliderDetection.instance.touch)
         {
             DetectMovement();
         }
@@ -44,13 +44,13 @@ public class PlayerMovement : MonoBehaviour
 
     void DetectMovement()
     {
-        if (walking && enabled)
+        if (walking && !EnemyColliderDetection.instance.touch)
         {
             myBody.velocity = new Vector2(Input.GetAxis(Axis.HORIZONTAL_AXIS) * (walk_Speed),
             myBody.velocity.y);
         }
 
-        if (runnig && enabled)
+        if (runnig && !EnemyColliderDetection.instance.touch)
         {
             myBody.velocity = new Vector2(Input.GetAxis(Axis.HORIZONTAL_AXIS) * (run_Speed),
             myBody.velocity.y);

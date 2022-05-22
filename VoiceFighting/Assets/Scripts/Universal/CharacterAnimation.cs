@@ -74,4 +74,8 @@ public class CharacterAnimation : MonoBehaviour
     {
         anim.SetTrigger(AnimationTags.SKILL_TRIGGER3);
     }
+    public void Skill4()
+    {
+        anim.SetTrigger(AnimationTags.SKILL_TRIGGER4);
+    }
 } // class

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ColliderDetection : MonoBehaviour
 {
+    public static ColliderDetection instance;
+
     private CharacterAnimation enemy_Anim;
     private CharacterAnimation player_Anim;
 
@@ -11,6 +13,11 @@ public class ColliderDetection : MonoBehaviour
 
     public bool touch = false;
 
+    void Awake()
+    {
+        instance = this;
+
+    }
     void Start()
     {
         enemy_Anim = GameObject.Find("Enemy").GetComponent<CharacterAnimation>();
@@ -19,7 +26,7 @@ public class ColliderDetection : MonoBehaviour
 
     IEnumerator ExampleCoroutine()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
     }
 
     private void OnTriggerEnter(Collider col)
@@ -28,6 +35,7 @@ public class ColliderDetection : MonoBehaviour
         {
             DoDamage();
             HitAnim();
+            StartCoroutine(this.ExampleCoroutine());
             touch = false;
             enemy_Move.enabled = true;
         }

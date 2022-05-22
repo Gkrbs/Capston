@@ -125,8 +125,8 @@ public class FightingCombo : MonoBehaviour
             }
         }
 
-//        foreach (int i in remove)
-//            currentCombos.RemoveAt(i);
+//////        foreach (int i in remove)
+//////            currentCombos.RemoveAt(i);
 
         if (Time.time > lastAttackedAt + cooldown)
         {

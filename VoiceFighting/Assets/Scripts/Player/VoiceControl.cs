@@ -21,9 +21,11 @@ public class VoiceControl : MonoBehaviour
         enemy_Move = GameObject.Find("Enemy").GetComponent<EnemyControll>();
 
         anim = GameObject.Find("Player").GetComponent<CharacterAnimation>();
-        actions.Add("combo", skill1);
-        actions.Add("cap", skill2);
-        actions.Add("no", skill3);
+
+        actions.Add("smash", skill1);
+        actions.Add("punch", skill2);
+        actions.Add("combo", skill3);
+        actions.Add("turn", skill4);
 
         keywordRecognizer = new KeywordRecognizer(actions.Keys.ToArray());
         keywordRecognizer.OnPhraseRecognized += RecognizedSpeech;
@@ -51,5 +53,8 @@ public class VoiceControl : MonoBehaviour
     {
         anim.Skill3();
     }
-
+    private void skill4()
+    {
+        anim.Skill4();
+    }
 }

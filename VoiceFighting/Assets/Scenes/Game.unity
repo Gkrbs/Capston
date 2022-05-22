@@ -620,7 +620,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 95695112}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.61996734, y: 2.9619384, z: -4.075556}
+  m_LocalPosition: {x: 0.6199676, y: 2.9619384, z: -4.075556}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 505991721}
@@ -1817,6 +1817,14 @@ PrefabInstance:
     - target: {fileID: 193188014, guid: 4d71524bb97748c408fbcd7c7397f422, type: 3}
       propertyPath: curState
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 193188014, guid: 4d71524bb97748c408fbcd7c7397f422, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 193188015, guid: 4d71524bb97748c408fbcd7c7397f422, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1260597861999642, guid: 4d71524bb97748c408fbcd7c7397f422, type: 3}
       propertyPath: m_Name
@@ -3518,7 +3526,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 928518402}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.61996734, y: 2.9619384, z: -4.075556}
+  m_LocalPosition: {x: 0.6199676, y: 2.9619384, z: -4.075556}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 980408671}
@@ -6464,7 +6472,23 @@ PrefabInstance:
       value: Skill2
       objectReference: {fileID: 0}
     - target: {fileID: 408168988, guid: d6d06c887a1aae94f8c6e8cc2c0c557b, type: 3}
+      propertyPath: combos.Array.data[4].name
+      value: Skill2
+      objectReference: {fileID: 0}
+    - target: {fileID: 408168988, guid: d6d06c887a1aae94f8c6e8cc2c0c557b, type: 3}
+      propertyPath: combos.Array.data[1].comboAttack.name
+      value: Skill3
+      objectReference: {fileID: 0}
+    - target: {fileID: 408168988, guid: d6d06c887a1aae94f8c6e8cc2c0c557b, type: 3}
+      propertyPath: combos.Array.data[2].comboAttack.name
+      value: Skill4
+      objectReference: {fileID: 0}
+    - target: {fileID: 408168988, guid: d6d06c887a1aae94f8c6e8cc2c0c557b, type: 3}
       propertyPath: combos.Array.data[3].comboAttack.name
+      value: Skill2
+      objectReference: {fileID: 0}
+    - target: {fileID: 408168988, guid: d6d06c887a1aae94f8c6e8cc2c0c557b, type: 3}
+      propertyPath: combos.Array.data[4].comboAttack.name
       value: Skill2
       objectReference: {fileID: 0}
     - target: {fileID: 408168988, guid: d6d06c887a1aae94f8c6e8cc2c0c557b, type: 3}
@@ -6472,7 +6496,15 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 408168988, guid: d6d06c887a1aae94f8c6e8cc2c0c557b, type: 3}
+      propertyPath: combos.Array.data[4].inputs.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 408168988, guid: d6d06c887a1aae94f8c6e8cc2c0c557b, type: 3}
       propertyPath: combos.Array.data[3].comboAttack.length
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 408168988, guid: d6d06c887a1aae94f8c6e8cc2c0c557b, type: 3}
+      propertyPath: combos.Array.data[4].comboAttack.length
       value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 408168988, guid: d6d06c887a1aae94f8c6e8cc2c0c557b, type: 3}
@@ -6513,6 +6545,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 408168988, guid: d6d06c887a1aae94f8c6e8cc2c0c557b, type: 3}
       propertyPath: combos.Array.data[3].inputs.Array.data[9].type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 408168988, guid: d6d06c887a1aae94f8c6e8cc2c0c557b, type: 3}
+      propertyPath: combos.Array.data[4].inputs.Array.data[0].type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 408168988, guid: d6d06c887a1aae94f8c6e8cc2c0c557b, type: 3}
+      propertyPath: combos.Array.data[4].inputs.Array.data[1].type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 408168988, guid: d6d06c887a1aae94f8c6e8cc2c0c557b, type: 3}
+      propertyPath: combos.Array.data[4].inputs.Array.data[2].type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 408168988, guid: d6d06c887a1aae94f8c6e8cc2c0c557b, type: 3}
+      propertyPath: combos.Array.data[4].inputs.Array.data[3].type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 408168988, guid: d6d06c887a1aae94f8c6e8cc2c0c557b, type: 3}
+      propertyPath: combos.Array.data[4].inputs.Array.data[4].type
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 408168988, guid: d6d06c887a1aae94f8c6e8cc2c0c557b, type: 3}
@@ -6687,6 +6739,18 @@ PrefabInstance:
       propertyPath: combos.Array.data[3].inputs.Array.data[52].type
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 408168988, guid: d6d06c887a1aae94f8c6e8cc2c0c557b, type: 3}
+      propertyPath: combos.Array.data[3].onInputted.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408168988, guid: d6d06c887a1aae94f8c6e8cc2c0c557b, type: 3}
+      propertyPath: combos.Array.data[3].onInputted.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 408168988, guid: d6d06c887a1aae94f8c6e8cc2c0c557b, type: 3}
+      propertyPath: combos.Array.data[3].onInputted.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1260597861999642, guid: d6d06c887a1aae94f8c6e8cc2c0c557b, type: 3}
       propertyPath: m_Name
       value: Player
@@ -6745,7 +6809,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2859545736808364018, guid: d6d06c887a1aae94f8c6e8cc2c0c557b, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.1068493
+      value: 1.2684493
       objectReference: {fileID: 0}
     - target: {fileID: 2859545736808364018, guid: d6d06c887a1aae94f8c6e8cc2c0c557b, type: 3}
       propertyPath: m_LocalScale.y

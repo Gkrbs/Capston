@@ -30,6 +30,7 @@ public class AnimationTags
     public const string SKILL_TRIGGER1 = "Skill1";
     public const string SKILL_TRIGGER2 = "Skill2";
     public const string SKILL_TRIGGER3 = "Skill3";
+    public const string SKILL_TRIGGER4 = "Skill4";
 }
 
 public class Axis

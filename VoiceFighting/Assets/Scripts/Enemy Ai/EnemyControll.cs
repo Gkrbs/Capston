@@ -41,13 +41,13 @@ public class EnemyControll : MonoBehaviour
 
     IEnumerator CheckState()
     {
-        while (!isDead)
+        while (!isDead && !ColliderDetection.instance.touch)
         {
             if(GameController.instance.enemyHealth <= 0f)
             {
                 isDead = true;
             }
-            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(0.3f);
 
             float dist = Vector3.Distance(playerTransform.position, _transform.position);
 
@@ -75,7 +75,7 @@ public class EnemyControll : MonoBehaviour
 
     IEnumerator CheckStateForAction()
     {
-        while (!isDead)
+        while (!isDead && !ColliderDetection.instance.touch)
         {
             switch (curState)
             {
